@@ -196,7 +196,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       try portal.deleteSigningShare()
       self.logger.debug("ViewController.deleteKeychain() - ✅ Deleted keychain data")
     } catch {
-      self.logger.error("ViewController.deleteKeychain() - ❌ Error deleting keychain data: \(error.localizedDescription)")
+      self.logger.error("ViewController.deleteKeychain() - ❌ Error deleting keychain data: \(error)")
     }
   }
 
@@ -390,7 +390,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
       }
     } catch {
-      self.logger.error("ViewController.testProviderRequest() - ❌ Error executing `\(method.rawValue)` request: \(error.localizedDescription)")
+      self.logger.error("ViewController.testProviderRequest() - ❌ Error executing `\(method.rawValue)` request: \(error)")
       return false
     }
   }
@@ -535,7 +535,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
       throw URLError(.badURL)
     } catch {
-      self.logger.error("ViewController.signIn() - Unable to sign in: \(error.localizedDescription)")
+      self.logger.error("ViewController.signIn() - Unable to sign in: \(error)")
       throw error
     }
   }
@@ -557,7 +557,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
       throw URLError(.badURL)
     } catch {
-      self.logger.error("ViewController.signUp() - Unable to sign up: \(error.localizedDescription)")
+      self.logger.error("ViewController.signUp() - Unable to sign up: \(error)")
       throw error
     }
   }
@@ -615,7 +615,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         )
       }
     } catch {
-      self.logger.error("ViewController.loadApplicationConfig() - Error loading application config: \(error.localizedDescription)")
+      self.logger.error("ViewController.loadApplicationConfig() - Error loading application config: \(error)")
     }
   }
 
@@ -907,7 +907,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleSignIn() - ❌ Error signing in: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleSignIn() - ❌ Error signing in: \(error)")
       }
     }
   }
@@ -941,7 +941,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleSignUp() - ❌ Error signing up: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleSignUp() - ❌ Error signing up: \(error)")
       }
     }
   }
@@ -982,7 +982,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
       } catch {
         self.stopLoading()
         print("⚠️", error)
-        self.logger.error("ViewController.handleEject() - Error ejecting wallet: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleEject() - Error ejecting wallet: \(error)")
       }
     }
   }
@@ -1002,7 +1002,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleGenerate() - ❌ Error creating wallet: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleGenerate() - ❌ Error creating wallet: \(error)")
       }
     }
   }
@@ -1024,7 +1024,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleGdriveBackup() - ❌ Error running backup: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleGdriveBackup() - ❌ Error running backup: \(error)")
       }
     }
   }
@@ -1053,7 +1053,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleGdriveRecover() - Error running recover: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleGdriveRecover() - Error running recover: \(error)")
       }
     }
   }
@@ -1071,7 +1071,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleiCloudBackup() - ❌ Error running backup: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleiCloudBackup() - ❌ Error running backup: \(error)")
       }
     }
   }
@@ -1100,7 +1100,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleiCloudRecover() - Error running recover: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleiCloudRecover() - Error running recover: \(error)")
       }
     }
   }
@@ -1119,7 +1119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handlePasskeyBackup() - Error running backup: \(error.localizedDescription)")
+        self.logger.error("ViewController.handlePasskeyBackup() - Error running backup: \(error)")
       }
     }
   }
@@ -1148,7 +1148,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handlePasskeyBackup() - Error running recover: \(error.localizedDescription)")
+        self.logger.error("ViewController.handlePasskeyBackup() - Error running recover: \(error)")
       }
     }
   }
@@ -1173,7 +1173,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handlePasskeyBackup() - Error running backup: \(error.localizedDescription)")
+        self.logger.error("ViewController.handlePasskeyBackup() - Error running backup: \(error)")
       }
     }
   }
@@ -1211,7 +1211,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.updateUIComponents()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handlePasskeyBackup() - Error running recover: \(error.localizedDescription)")
+        self.logger.error("ViewController.handlePasskeyBackup() - Error running recover: \(error)")
       }
     }
   }
@@ -1227,7 +1227,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print(erc20Balances)
         self.logger.info("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ✅ Successfully fetched balances.")
       } catch {
-        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching balances: \(error.localizedDescription)")
+        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching balances: \(error)")
         return
       }
       do {
@@ -1235,7 +1235,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print(nfts)
         self.logger.info("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ✅ Successfully fetched NFTs.")
       } catch {
-        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching NFTs: \(error.localizedDescription)")
+        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching NFTs: \(error)")
         return
       }
       do {
@@ -1243,14 +1243,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print(shares)
         self.logger.info("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ✅ Successfully fetched share metadata.")
       } catch {
-        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching share metadata: \(error.localizedDescription)")
+        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching share metadata: \(error)")
       }
       do {
         let transactions = try await self.getTransactions(chainId)
         print(transactions)
         self.logger.info("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ✅ Successfully fetched transactions.")
       } catch {
-        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching transactions: \(error.localizedDescription)")
+        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error fetching transactions: \(error)")
         return
       }
       do {
@@ -1264,7 +1264,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print(simulatedTransaction)
         self.logger.info("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ✅ Successfully simulated transaction.")
       } catch {
-        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error simulating transaction: \(error.localizedDescription)")
+        self.logger.error("ViewController.testGetNFTsTrxsBalancesSharesAndSimTrx() - ❌ Error simulating transaction: \(error)")
         return
       }
     }
@@ -1276,7 +1276,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         _ = try await self.sendTransaction()
         self.logger.info("ViewController.handlSend() - ✅ Successfully sent transaction")
       } catch {
-        self.logger.error("ViewController.handleSend() - ❌ Error sending transaction: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleSend() - ❌ Error sending transaction: \(error)")
       }
     }
   }
@@ -1297,7 +1297,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         self.logger.info("ViewController.testProviderRequests() - ✅ Successfully tested provider requests")
       } catch {
-        self.logger.error("ViewController.testProviderRequests() - ❌ Error testing transactions: \(error.localizedDescription)")
+        self.logger.error("ViewController.testProviderRequests() - ❌ Error testing transactions: \(error)")
       }
     }
   }
@@ -1336,7 +1336,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.stopLoading()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleSign() - ❌ Error signing message: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleSign() - ❌ Error signing message: \(error)")
       }
     }
   }
@@ -1375,7 +1375,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.stopLoading()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleSign() - ❌ Error signing message: \(error.localizedDescription)")
+        self.logger.error("ViewController.handleSign() - ❌ Error signing message: \(error)")
       }
     }
   }
@@ -1393,15 +1393,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
           return
         }
 
-        // Airdrop for testing
-        let airdropParams: [Any] = [AnyCodable(address), AnyCodable(10000000)]
-        let airdropResponse = try await portal.request(chainId, withMethod: .sol_requestAirdrop, andParams: airdropParams)
-//        self.logger.info("Airdrop successful: \(airdropResponse)")
+//        // Airdrop for testing
+//        let airdropParams: [Any] = [AnyCodable(address), AnyCodable(1000)]
+//        let airdropResponse = try await portal.request(chainId, withMethod: .sol_requestAirdrop, andParams: airdropParams)
+//        guard let airdropResResult = airdropResponse.result as? String else {
+//          self.logger.error("ViewController.handleSolanaSendTrx() - ❌ Error getting airdrop")
+//          self.stopLoading()
+//          return
+//        }
+//        self.logger.info("Get airdrop successful: \(airdropResResult)")
 
         // Fetching recent blockhash
+        self.logger.info("ViewController.handleSolanaSendTrx() - Getting latest blockhash")
         let blockhashResponse = try await portal.request(chainId, withMethod: .sol_getLatestBlockhash, andParams: [])
-        let recentBlockhash = blockhashResponse.result as? String ?? ""
-//        self.logger.info("Get most recent blockhash successful: \(blockhashResponse)")
+        guard let blockhashResResult = blockhashResponse.result as? SolGetLatestBlockhashResponse else {
+          self.logger.error("ViewController.handleSolanaSendTrx() - ❌ Error getting most recent blockhash")
+          self.stopLoading()
+          return
+        }
+        self.logger.info("ViewController.handleSolanaSendTrx() - Get most recent blockhash successful: \(blockhashResResult.result.value.blockhash)")
         
         // Prepare the transaction
         let toAddress = "GPsPXxoQA51aTJJkNHtFDFYui5hN5UxcFPnheJEHa5Du"
@@ -1425,7 +1435,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 "numReadonlySignedAccounts": 0,
                 "numReadonlyUnsignedAccounts": 1
               ],
-              "recentBlockhash": recentBlockhash,
+              "recentBlockhash": blockhashResResult.result.value.blockhash,
               "instructions": [
                 [
                   "programIdIndex": 2, // Index of the System Program in 'accountKeys'
@@ -1438,14 +1448,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         ]
 
         // Send the transaction
-        let transactionResponse = try await portal.request(chainId, withMethod: .sol_sendTransaction, andParams: params)
-        let signature = transactionResponse.result
-        self.logger.info("ViewController.handleSolanaSendTrx() - ✅ Successfully signed message")
+        let transactionResponse = try await portal.request(chainId, withMethod: .sol_signAndSendTransaction, andParams: params)
+        guard let transactionResResult = transactionResponse.result as? String else {
+          self.logger.error("ViewController.handleSolanaSendTrx() - ❌ Error with sendTransaction response")
+          self.stopLoading()
+          return
+        }
+        self.logger.info("ViewController.handleSolanaSendTrx() - ✅ Successfully signed message: \(transactionResResult)")
 
         self.stopLoading()
       } catch {
         self.stopLoading()
-        self.logger.error("ViewController.handleSolanaSendTrx() - ❌ Error signing message: \(error)")
+        self.logger.error("ViewController.handleSolanaSendTrx() - ❌ Generic error: \(error)")
       }
     }
   }
