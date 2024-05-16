@@ -5,7 +5,7 @@
 //  Created by Portal Labs, Inc.
 //
 
-import PortalSwift
+import PortalSwiftso
 import UIKit
 
 class ConnectViewController: UIViewController, UITextFieldDelegate {

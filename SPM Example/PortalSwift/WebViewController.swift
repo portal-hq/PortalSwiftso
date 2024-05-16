@@ -6,7 +6,7 @@
 //  Copyright © 2023 CocoaPods. All rights reserved.
 //
 
-import PortalSwift
+import PortalSwiftso
 import SwiftUI
 import WebKit
 
